@@ -1,4 +1,4 @@
 category: OCaml
-requires: ocaml libdbus1_3
+requires: ocaml libdbus1_3 libdbus1-devel
 sdesc: "OCaml D-Bus bindings"
 ldesc: "OCaml bindings for the D-Bus IPC system."

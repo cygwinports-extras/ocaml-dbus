@@ -1,0 +1,18 @@
+ORIG_PN="ocaml_dbus"
+
+inherit ocaml
+
+DESCRIPTION="OCaml D-Bus bindings"
+HOMEPAGE="http://projects.snarc.org/ocaml-dbus/"
+SRC_URI="http://projects.snarc.org/ocaml-dbus/download/${ORIG_PN}-${PV}.tar.bz2"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake -j1
+}
+
+src_install() {
+	cd ${B}
+	ocaml_install OCAMLDESTDIR=${D}${OCAML_LIBDIR}
+}
