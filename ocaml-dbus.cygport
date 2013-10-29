@@ -1,0 +1,22 @@
+inherit ocaml
+
+NAME="ocaml-dbus"
+VERSION=0.29
+RELEASE=2
+CATEGORY="Libs"
+SUMMARY="OCaml D-Bus bindings"
+DESCRIPTION="OCaml bindings for the D-Bus IPC system."
+HOMEPAGE="http://projects.snarc.org/ocaml-dbus/"
+SRC_URI="http://projects.snarc.org/ocaml-dbus/download/ocaml_dbus-${VERSION}.tar.bz2"
+SRC_DIR="ocaml_dbus-${VERSION}"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake -j1
+}
+
+src_install() {
+	cd ${B}
+	ocaml_install OCAMLDESTDIR=${D}${OCAML_LIBDIR}
+}
