@@ -1,0 +1,11 @@
+--- origsrc/ocaml_dbus-0.29/Makefile	2009-09-24 06:42:42.000000000 -0500
++++ src/ocaml_dbus-0.29/Makefile	2013-10-28 22:38:07.106849700 -0500
+@@ -64,7 +64,7 @@ check:
+ 
+ .PHONY: install
+ install: $(LIBS)
+-	ocamlfind install -destdir $(OCAMLDESTDIR) -ldconf ignore $(OCAML_PKG_NAME) META $(INTERFACES) $(LIBS) *.a *.so *.cmx
++	ocamlfind install -destdir $(OCAMLDESTDIR) -ldconf ignore $(OCAML_PKG_NAME) META $(INTERFACES) $(LIBS) *.a *.cmx -optional *.so
+ 
+ install-opt: install
+ 

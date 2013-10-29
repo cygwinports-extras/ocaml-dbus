@@ -2,13 +2,14 @@ inherit ocaml
 
 NAME="ocaml-dbus"
 VERSION=0.29
-RELEASE=2
+RELEASE=3
 CATEGORY="Libs"
 SUMMARY="OCaml D-Bus bindings"
 DESCRIPTION="OCaml bindings for the D-Bus IPC system."
 HOMEPAGE="http://projects.snarc.org/ocaml-dbus/"
 SRC_URI="http://projects.snarc.org/ocaml-dbus/download/ocaml_dbus-${VERSION}.tar.bz2"
 SRC_DIR="ocaml_dbus-${VERSION}"
+PATCH_URI="0.29-static.patch"
 
 src_compile() {
 	lndirs
